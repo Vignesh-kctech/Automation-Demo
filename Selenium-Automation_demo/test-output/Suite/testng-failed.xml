@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="1" guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="1" name="Regression(failed)">
+    <classes>
+      <class name="com.Demo.pages.GmailTest">
+        <methods>
+          <include name="stopexecution"/>
+          <include name="report"/>
+          <include name="CloseDriver"/>
+          <include name="NSS_OrangeHRM"/>
+          <include name="endreport"/>
+          <include name="Beforeclass"/>
+        </methods>
+      </class> <!-- com.Demo.pages.GmailTest -->
+    </classes>
+  </test> <!-- Regression(failed) -->
+</suite> <!-- Failed suite [Suite] -->

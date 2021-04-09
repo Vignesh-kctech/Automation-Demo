@@ -1,0 +1,13 @@
+{
+	"DbCredentials":{
+	"HostName":"127.0.0.1",
+	"Port":"3306",
+	"Database":"Orange",
+	"DbUsername":"root",
+	"DbuserPassword":"Test123#"
+	},
+
+	"Sql Query":{
+	"SelectQueryName_Login":"SELECT * FROM Orange.Orange_HRM;"
+}
+}

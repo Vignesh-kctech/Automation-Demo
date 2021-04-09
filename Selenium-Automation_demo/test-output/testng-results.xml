@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="77594" started-at="2021-04-09T13:40:23Z" finished-at="2021-04-09T13:41:41Z">
+    <groups>
+      <group name="Regression">
+        <method signature="GmailTest.NSS_OrangeHRM(java.util.Map)[pri:0, instance:com.Demo.pages.GmailTest@47542153]" name="NSS_OrangeHRM" class="com.Demo.pages.GmailTest"/>
+      </group> <!-- Regression -->
+    </groups>
+    <test name="Default test" duration-ms="77594" started-at="2021-04-09T13:40:23Z" finished-at="2021-04-09T13:41:41Z">
+      <class name="com.Demo.pages.GmailTest">
+        <test-method status="PASS" signature="Beforeclass(org.testng.ITestContext)[pri:0, instance:com.Demo.pages.GmailTest@47542153]" name="Beforeclass" is-config="true" duration-ms="14166" started-at="2021-04-09T13:40:23Z" finished-at="2021-04-09T13:40:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@64f555e7]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Beforeclass -->
+        <test-method status="PASS" signature="report(org.testng.ITestResult)[pri:0, instance:com.Demo.pages.GmailTest@47542153]" name="report" is-config="true" duration-ms="4" started-at="2021-04-09T13:40:37Z" finished-at="2021-04-09T13:40:37Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=NSS_OrangeHRM status=SUCCESS method=GmailTest.NSS_OrangeHRM(java.util.Map)[pri:0, instance:com.Demo.pages.GmailTest@47542153] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- report -->
+        <test-method status="PASS" signature="NSS_OrangeHRM(java.util.Map)[pri:0, instance:com.Demo.pages.GmailTest@47542153]" name="NSS_OrangeHRM" duration-ms="62404" started-at="2021-04-09T13:40:37Z" data-provider="fetchData" finished-at="2021-04-09T13:41:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NSS_OrangeHRM -->
+        <test-method status="PASS" signature="endreport()[pri:0, instance:com.Demo.pages.GmailTest@47542153]" name="endreport" is-config="true" duration-ms="3" started-at="2021-04-09T13:41:40Z" finished-at="2021-04-09T13:41:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endreport -->
+        <test-method status="PASS" signature="stopexecution(org.testng.ITestResult)[pri:0, instance:com.Demo.pages.GmailTest@47542153]" name="stopexecution" is-config="true" duration-ms="0" started-at="2021-04-09T13:41:40Z" finished-at="2021-04-09T13:41:40Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=NSS_OrangeHRM status=SUCCESS method=GmailTest.NSS_OrangeHRM(java.util.Map)[pri:0, instance:com.Demo.pages.GmailTest@47542153] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- stopexecution -->
+        <test-method status="PASS" signature="CloseDriver()[pri:0, instance:com.Demo.pages.GmailTest@47542153]" name="CloseDriver" is-config="true" duration-ms="966" started-at="2021-04-09T13:41:40Z" finished-at="2021-04-09T13:41:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseDriver -->
+      </class> <!-- com.Demo.pages.GmailTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
