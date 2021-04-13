@@ -15,6 +15,7 @@ import org.testng.annotations.Test;
 
 import com.Demo.Selenium.base.SeleniumBase;
 import com.Demo.utils.DriverInitialize;
+import com.nss.pages.LoginPage;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
@@ -54,31 +55,11 @@ public class GmailLogin extends SeleniumBase {
 		}
 		return this;	
 	}
-	
-	public GmailLogin WindowNavigate() {
-		try {
-		Set<String> windowHandles = driver.getWindowHandles();
-	    List<String> windowStrings = new ArrayList<>(windowHandles);
-	    String reqWindow = windowStrings.get(1);
-	    currentdriver.switchTo().window(reqWindow);	
-	    Thread.sleep(2000);
-	    ReportLog("info", "Navigated to New window with title of:"+currentdriver.getTitle());
-	    return this;
-		}
-		catch(Exception e) {
-		ReportLog("fail", "Unable to Navigate New Window");
-		DriverInitialize.extent.flush();
-		System.exit(1);
-		return null;
-		}}
-		
+/*		
 		public GmailLogin enterUsername(String username) throws InterruptedException {
 			try {
-			//click("//input")
-			//Clear(findelement("xpath", "//input[@id='txtUsername']"));
 			WebElement ele = findelement("xpath", "//input[@id='txtUsername']" );
-			ele.sendKeys(username);		
-			//SendKeys(findelement("name", "//input[@id='txtUsername']"),username);
+			ele.sendKeys(username);
 			ReportLog("info", "Username Entered In the Username Input Field:<font color='blue'><b>"+username+"</b></font>");
 			return this;
 			}
@@ -88,12 +69,31 @@ public class GmailLogin extends SeleniumBase {
 			}
 			
 		}
+*/
+	// Enter user name in username field
+		public GmailLogin enterUsername(String username) throws InterruptedException {
+			try {
+			//click("//input")
+				boolean verifyname = Verifyelementpresent("name", "txtUsername", 10);
+				if(verifyname) {
+					Clear(findelement("name", "txtUsername"));
+					SendKeys(findelement("name", "txtUsername"),username);
+					ReportLog("info", "Username Entered In the Username Input Field:<font color='blue'><b>"+username+"</b></font>");	
+				}
+				return this;
+			}
+			catch(Exception e) {
+			ReportLog("fail", "Unable to enter username");
+			return null;
+			}
+			
+		}
+	
+/*	
 		public GmailLogin enterPassword(String password) throws InterruptedException {
 			try {
-			//Clear(findelement("xpath", "EnterPassword"));
 			WebElement ele = findelement("xpath", "//input[@id='txtPassword']" );
 			ele.sendKeys(password);
-			//SendKeys(findelement("xpath", "//input[@id='txtPassword']"),password);
 			ReportLog("info", "Password Entered In the Password Input Field");
 			return this;
 			}
@@ -103,6 +103,30 @@ public class GmailLogin extends SeleniumBase {
 			}
 			
 		}
+*/
+		
+		public GmailLogin enterPassword(String password) throws InterruptedException {
+			try {
+				boolean verifypass = Verifyelementpresent("name", "txtPassword", 10);
+				if(verifypass) {
+					Clear(findelement("name", "txtPassword"));
+					SendKeys(findelement("name", "txtPassword"),password);
+					ReportLog("info", "Password Entered In the Password Input Field");	
+				}
+				else {
+					ReportLog("fail", "unable to enter the password");
+					
+				}
+				return this;
+			}
+			catch(Exception e) {
+			ReportLog("fail", "Unable to enter password");
+			return null;
+			}
+			
+		}
+		
+/*
 		public GmailLogin clickloginbutton() throws InterruptedException {
 			try {
 			//Click(findelement("id", "LoginButton"));
@@ -110,6 +134,7 @@ public class GmailLogin extends SeleniumBase {
 			ele.click();
 			//Click(findelement("xpath", "//input[@id='btnLogin']"));
 			Thread.sleep(5000);
+			ReportLog("info", "Successfully logged into the website");
 			return this;
 			}
 			catch(Exception e) {
@@ -118,22 +143,27 @@ public class GmailLogin extends SeleniumBase {
 			}
 			
 		}
-		public GmailLogin MainWindowNavigation() {
+	*/
+		
+		public GmailLogin clickloginbutton() throws InterruptedException {
 			try {
-			String winHandleBefore = driver.getWindowHandle();
-		    currentdriver.switchTo().window(winHandleBefore);
-		    Thread.sleep(3000);
-		    ReportLog("info", "Navigated to New window with title of:"+currentdriver.getTitle());
-			return this;
+				boolean verifyloginbutton = Verifyelementpresent("id", "btnLogin", 10);
+				if(verifyloginbutton) {
+					Click(findelement("id", "btnLogin"));
+					Thread.sleep(2000);
+					ReportLog("pass", "Successfully logged into the website");
+				}
+				else {
+					ReportLog("fail", "Unable to Login");
+				}
+				//Click(findelement("xpath", "//input[@id='btnLogin']"));
+				return this;
+				}
+				catch(Exception e) {
+				ReportLog("fail", "Unable to click login button");
+				return null;
+				}
 			
-			}catch (Exception e) {
-			ReportLog("fail", "Window navigation failed !!!");
-			return null;
 			}
 		}
-
-	
-
-	
-	}
 

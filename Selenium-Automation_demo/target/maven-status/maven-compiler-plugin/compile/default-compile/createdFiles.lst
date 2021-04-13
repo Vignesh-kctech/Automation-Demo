@@ -1,11 +1,13 @@
 com/Demo/pages/LoginPage.class
-com/Demo/utils/DataLibrary.class
-com/Demo/utils/FalsePositiveConfigurations.class
-com/Demo/utils/JsonDataRead$2.class
+com/Demo/pages/VerifyLocation.class
 com/Demo/pages/GmailLogin.class
 com/Demo/Selenium/base/SeleniumBase.class
 com/Demo/utils/JsonDataRead.class
+com/Demo/utils/DriverInitialize.class
+com/Demo/utils/DataLibrary.class
+com/Demo/utils/FalsePositiveConfigurations.class
+com/Demo/utils/JsonDataRead$2.class
+com/Demo/pages/AddLocation.class
 com/Demo/pages/HomePage.class
 com/Demo/utils/JsonDataRead$1.class
-com/Demo/utils/DriverInitialize.class
 com/Demo/utils/Databaseconfig.class

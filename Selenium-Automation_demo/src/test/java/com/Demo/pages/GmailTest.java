@@ -28,7 +28,7 @@ public class GmailTest extends DriverInitialize{
 		GmailLogin lp = new GmailLogin(driver, test);
 		HomePage hp = new HomePage(driver, test);
 		AddLocation loc = new AddLocation(driver,test);
-		VerifyLocation vl = new VerifyLocation(driver,test);
+		//VerifyLocation vl = new VerifyLocation(driver,test);
 		
 		EnvironmentValuesDatas = DriverInitialize.ReadCurrentQueryData();
 		
@@ -48,11 +48,11 @@ public class GmailTest extends DriverInitialize{
 			lp.NavigateURL(Url)
 			.enterUsername(Username)
 			.enterPassword(Password)
-			.clickloginbutton()
-			.MainWindowNavigation();
+			.clickloginbutton();
 			hp.movetoelement();
-			loc.EnterDetails();
-			vl.Verify();
+			//loc.EnterDetails();
+			//loc.Verify();
+			//vl.Verify();
 		
 			
 			

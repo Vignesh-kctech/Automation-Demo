@@ -36,41 +36,73 @@ public class HomePage extends SeleniumBase {
 
 public  HomePage movetoelement() throws InterruptedException {
 	try {
-		WebElement ele = findelement("xpath", "//b[contains(text(),'Admin')]" );
-		Actions act = new Actions(driver);
-		act.moveToElement(ele).perform();
+		boolean isEnabled = Verifyelementpresent("xpath","//b[contains(text(),'Admin')]",10);
+		if(isEnabled) {
+			WebElement ele = findelement("xpath", "//b[contains(text(),'Admin')]" );
+			Actions act = new Actions(driver);
+			act.moveToElement(ele).perform();
+		}
+		else {
+			ReportLog("info", "Unable to move to the Expected tab");
+		}
 		Thread.sleep(2000);
 		
 		// organization tab
-		WebElement ele1 = findelement("xpath", "//div[@class='menu']//a[@id='menu_admin_Organization']");
-		act.moveToElement(ele1).perform();
-		Thread.sleep(2000);
+		boolean isEnabled1 = Verifyelementpresent("xpath","//div[@class='menu']//a[@id='menu_admin_Organization']",10);
+		if(isEnabled1) {
+			WebElement ele1 = findelement("xpath", "//div[@class='menu']//a[@id='menu_admin_Organization']");
+			Actions act = new Actions(driver);
+			act.moveToElement(ele1).perform();
+			Thread.sleep(2000);
+			ReportLog("pass", "Successfully Moved on to Admin tab");
+		}
+		else {
+			ReportLog("fail", "Unable to move to the specified tab");
+		}
+		
+		
+		boolean isEnabled3 = Verifyelementpresent("xpath","//div[@class='menu']//a[@id='menu_admin_viewLocations']",10);
+		if(isEnabled3) {
+			WebElement ele2 = driver.findElement(By.xpath("//div[@class='menu']//a[@id='menu_admin_viewLocations']"));
+			Actions act = new Actions(driver);
+			act.moveToElement(ele2).perform();
+			ReportLog("pass", "Successfully Moved on to the Organizations tab");
+		}
+		else {
+			ReportLog("fail", "Unable to move to the Organizations Tab");
+		}
 				
 		//organization subtab	
-		WebElement ele2 = driver.findElement(By.xpath("//div[@class='menu']//a[@id='menu_admin_viewLocations']"));
-		act.moveToElement(ele2).perform();
+		
 		
 		//Click action
-		WebElement ele3 = driver.findElement(By.xpath("//div[@class='menu']//a[@id='menu_admin_viewLocations']"));
-		ele3.click();
-		Thread.sleep(5000);
+		boolean isEnabled4 = Verifyelementpresent("xpath","//div[@class='menu']//a[@id='menu_admin_viewLocations']", 10);
+		if(isEnabled4) {
+			Click(findelement("xpath", "//div[@class='menu']//a[@id='menu_admin_viewLocations']"));
+			ReportLog("pass", "Successfully Moved on to the Location tab");
+			Thread.sleep(3000);
+		}
+		else {
+			ReportLog("fail", "Unbale to move to the Location tab");
+		}
 		
 		
-		WebElement ele4 = findelement("xpath", "//input[@id='btnAdd']" );
-		ele4.click();
-		Thread.sleep(3000);
-		
+		boolean isClicked = Verifyelementpresent("xpath","//input[@id='btnAdd']", 5);
+		if(isClicked) {
+			Click(findelement("xpath", "//input[@id='btnAdd']"));
+			ReportLog("pass", "Add button is clicked to add the locations");
+			Thread.sleep(3000);	
+		}
+		else {
+			ReportLog("fail", "Unable to click the AddButton");
+		}
 		return this;
 	}
 	
 	catch(Exception e){
 		return null;
 		
-	}
-	
-	
-	
-	
+	}	
 	
 }
 }
