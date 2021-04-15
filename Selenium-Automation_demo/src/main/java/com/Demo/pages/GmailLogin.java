@@ -15,7 +15,7 @@ import org.testng.annotations.Test;
 
 import com.Demo.Selenium.base.SeleniumBase;
 import com.Demo.utils.DriverInitialize;
-import com.nss.pages.LoginPage;
+import com.Demo.pages.LoginPage;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
@@ -79,6 +79,9 @@ public class GmailLogin extends SeleniumBase {
 					Clear(findelement("name", "txtUsername"));
 					SendKeys(findelement("name", "txtUsername"),username);
 					ReportLog("info", "Username Entered In the Username Input Field:<font color='blue'><b>"+username+"</b></font>");	
+				}
+				else {
+					ReportLog("fail", "Unable to enter the Username");
 				}
 				return this;
 			}

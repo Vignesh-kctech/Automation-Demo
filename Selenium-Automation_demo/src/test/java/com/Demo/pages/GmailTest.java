@@ -50,8 +50,8 @@ public class GmailTest extends DriverInitialize{
 			.enterPassword(Password)
 			.clickloginbutton();
 			hp.movetoelement();
-			//loc.EnterDetails();
-			//loc.Verify();
+			loc.EnterDetails();
+			loc.Verify();
 			//vl.Verify();
 		
 			

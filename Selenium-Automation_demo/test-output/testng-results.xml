@@ -2,26 +2,26 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="46570" started-at="2021-04-13T15:22:59Z" finished-at="2021-04-13T15:23:46Z">
+  <suite name="Default suite" duration-ms="94500" started-at="2021-04-15T11:11:24Z" finished-at="2021-04-15T11:12:58Z">
     <groups>
       <group name="Regression">
         <method signature="GmailTest.NSS_OrangeHRM(java.util.Map)[pri:0, instance:com.Demo.pages.GmailTest@47542153]" name="NSS_OrangeHRM" class="com.Demo.pages.GmailTest"/>
       </group> <!-- Regression -->
     </groups>
-    <test name="Default test" duration-ms="46570" started-at="2021-04-13T15:22:59Z" finished-at="2021-04-13T15:23:46Z">
+    <test name="Default test" duration-ms="94500" started-at="2021-04-15T11:11:24Z" finished-at="2021-04-15T11:12:58Z">
       <class name="com.Demo.pages.GmailTest">
-        <test-method status="PASS" signature="Beforeclass(org.testng.ITestContext)[pri:0, instance:com.Demo.pages.GmailTest@47542153]" name="Beforeclass" is-config="true" duration-ms="15330" started-at="2021-04-13T15:22:59Z" finished-at="2021-04-13T15:23:14Z">
+        <test-method status="PASS" signature="Beforeclass(org.testng.ITestContext)[pri:0, instance:com.Demo.pages.GmailTest@47542153]" name="Beforeclass" is-config="true" duration-ms="11529" started-at="2021-04-15T11:11:24Z" finished-at="2021-04-15T11:11:36Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@ca66933]]>
+                <![CDATA[org.testng.TestRunner@7d37f1c]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Beforeclass -->
-        <test-method status="PASS" signature="report(org.testng.ITestResult)[pri:0, instance:com.Demo.pages.GmailTest@47542153]" name="report" is-config="true" duration-ms="3" started-at="2021-04-13T15:23:14Z" finished-at="2021-04-13T15:23:14Z">
+        <test-method status="PASS" signature="report(org.testng.ITestResult)[pri:0, instance:com.Demo.pages.GmailTest@47542153]" name="report" is-config="true" duration-ms="4" started-at="2021-04-15T11:11:36Z" finished-at="2021-04-15T11:11:36Z">
           <params>
             <param index="0">
               <value>
@@ -32,7 +32,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- report -->
-        <test-method status="PASS" signature="NSS_OrangeHRM(java.util.Map)[pri:0, instance:com.Demo.pages.GmailTest@47542153]" name="NSS_OrangeHRM" duration-ms="30394" started-at="2021-04-13T15:23:14Z" data-provider="fetchData" finished-at="2021-04-13T15:23:45Z">
+        <test-method status="PASS" signature="NSS_OrangeHRM(java.util.Map)[pri:0, instance:com.Demo.pages.GmailTest@47542153]" name="NSS_OrangeHRM" duration-ms="81737" started-at="2021-04-15T11:11:36Z" data-provider="fetchData" finished-at="2021-04-15T11:12:57Z">
           <params>
             <param index="0">
               <value>
@@ -43,11 +43,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- NSS_OrangeHRM -->
-        <test-method status="PASS" signature="endreport()[pri:0, instance:com.Demo.pages.GmailTest@47542153]" name="endreport" is-config="true" duration-ms="2" started-at="2021-04-13T15:23:45Z" finished-at="2021-04-13T15:23:45Z">
+        <test-method status="PASS" signature="endreport()[pri:0, instance:com.Demo.pages.GmailTest@47542153]" name="endreport" is-config="true" duration-ms="3" started-at="2021-04-15T11:12:57Z" finished-at="2021-04-15T11:12:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endreport -->
-        <test-method status="PASS" signature="stopexecution(org.testng.ITestResult)[pri:0, instance:com.Demo.pages.GmailTest@47542153]" name="stopexecution" is-config="true" duration-ms="1" started-at="2021-04-13T15:23:45Z" finished-at="2021-04-13T15:23:45Z">
+        <test-method status="PASS" signature="stopexecution(org.testng.ITestResult)[pri:0, instance:com.Demo.pages.GmailTest@47542153]" name="stopexecution" is-config="true" duration-ms="0" started-at="2021-04-15T11:12:57Z" finished-at="2021-04-15T11:12:57Z">
           <params>
             <param index="0">
               <value>
@@ -58,7 +58,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- stopexecution -->
-        <test-method status="PASS" signature="CloseDriver()[pri:0, instance:com.Demo.pages.GmailTest@47542153]" name="CloseDriver" is-config="true" duration-ms="771" started-at="2021-04-13T15:23:45Z" finished-at="2021-04-13T15:23:46Z">
+        <test-method status="PASS" signature="CloseDriver()[pri:0, instance:com.Demo.pages.GmailTest@47542153]" name="CloseDriver" is-config="true" duration-ms="1195" started-at="2021-04-15T11:12:57Z" finished-at="2021-04-15T11:12:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CloseDriver -->
